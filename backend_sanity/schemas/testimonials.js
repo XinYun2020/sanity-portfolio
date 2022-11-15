@@ -1,16 +1,30 @@
 export default {
-  name: "tertimonials",
+  name: "testimonials",
   title: "Testimonials",
   type: "document",
-  field: [
-    { name: "name", title: "Name", type: "string" },
-    { name: "company", title: "Company", type: "string" },
+  fields: [
     {
-      name: "imageurl",
-      title: "ImgURL",
-      type: "image",
-      options: { hotspot: true },
+      name: "name",
+      title: "Name",
+      type: "string",
     },
-    { name: "name", title: "Name", type: "string" },
+    {
+      name: "company",
+      title: "Company",
+      type: "string",
+    },
+    {
+      name: "imgurl",
+      title: "ImgUrl",
+      type: "image",
+      options: {
+        hotspot: true, // user will be able to crop the hotspot of the image
+      },
+    },
+    {
+      name: "feedback",
+      title: "Feedback",
+      type: "string",
+    },
   ],
 };
