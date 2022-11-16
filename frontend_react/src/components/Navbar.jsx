@@ -10,7 +10,7 @@ const Navbar = ({ children }) => {
         <div className="flex justify-start items-center font-bold text-slate-700">
           {"<x.z>"}
         </div>
-        <ul className="flex-1 flex justify-center items-center list-style-none">
+        <ul className="flex-1 flex justify-center items-center list-style-none ">
           {["home", "about", "contact", "work", "skills", "contact"].map(
             (item) => (
               <li
@@ -35,7 +35,10 @@ const Navbar = ({ children }) => {
             onClick={() => setToggle(true)}
             className={`rounded-full bg-slate-600 text-slate-300 align-middle font-bold text-xl ${
               toggle ? " opacity-0" : ""
-            }`}
+            }
+            fixed top-2.5 right-4 z-10 
+            hover:bg-blue-700 transition-all duration-200 ease-linear
+            `}
           >
             <HiMenuAlt4 />
           </button>
