@@ -45,7 +45,7 @@ const Navbar = ({ children }) => {
 
           {toggle ? (
             <motion.div
-              // whileInView={{ x: [300, 0] }}
+              whileInView={{ x: [300, 0], opacity: [0, 1] }}
               transition={{ duration: 0.85, ease: "easeOut" }}
               className="fixed top-0 bottom-0 right-0 z-10 px-4 py-2 w-4/5  
               flex justify-start items-end flex-col 

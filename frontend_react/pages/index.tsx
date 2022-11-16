@@ -21,7 +21,8 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center h-screen">
+      <main className="flex w-full flex-1 flex-col items-center xjustify-center px-20 text-center h-screen">
+        <div className="py-8"></div>
         <Header />
         <About />
         <Work />

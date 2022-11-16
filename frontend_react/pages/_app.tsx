@@ -4,9 +4,13 @@ import { Layout } from "../src/components/index";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <div className="bg-slate-100 w-full h-full">
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </div>
+    </>
   );
 }
 
