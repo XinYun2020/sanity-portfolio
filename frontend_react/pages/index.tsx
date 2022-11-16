@@ -12,7 +12,7 @@ import {
 
 const Home: NextPage = () => {
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="">
       <Head>
         <title>Portfolio</title>
         <link
@@ -21,13 +21,13 @@ const Home: NextPage = () => {
         />
       </Head>
 
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
-        {/* <Header />
+      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center h-screen">
+        <Header />
         <About />
         <Work />
         <Skills />
         <Testimonial />
-        <Footer /> */}
+        <Footer />
       </main>
       {/* 
       <footer className="flex h-24 w-full items-center justify-center border-t">
