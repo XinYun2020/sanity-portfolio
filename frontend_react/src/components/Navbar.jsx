@@ -6,11 +6,11 @@ const Navbar = ({ children }) => {
   const [toggle, setToggle] = useState(false);
   return (
     <>
-      <nav className="bg-slate-300 bg-opacity-25 w-full flex justify-between items-center py-2 px-4 border border-slate-300 border-opacity-25 fixed z-20 backdrop-blur-sm">
+      <nav className="bg-slate-300 bg-opacity-25 w-full flex justify-between items-center py-2 px-4 border-b xborder-orange-400 border-opacity-20 fixed z-20 backdrop-blur-sm">
         <div className="flex justify-start items-center font-bold text-slate-700">
           {"<x.z>"}
         </div>
-        <ul className="flex-1 flex justify-center items-center list-style-none ">
+        <ul className="flex-1 flex justify-center items-center list-style-none max-lg:hidden">
           {["home", "about", "contact", "work", "skills", "contact"].map(
             (item) => (
               <li
@@ -22,9 +22,7 @@ const Navbar = ({ children }) => {
                   href={`#${item}`}
                   className="text-decoration-none text-slate-700 uppercase flex-col font-semibold 
                   hover:text-blue-700 hover:underline underline-offset-4 transition-all duration-200 ease-linear"
-                >
-                  {item}
-                </a>
+                ></a>
               </li>
             )
           )}
@@ -37,7 +35,7 @@ const Navbar = ({ children }) => {
               toggle ? " opacity-0" : ""
             }
             fixed top-2.5 right-4 z-10 
-            hover:bg-blue-700 transition-all duration-200 ease-linear
+            hover:bg-blue-700 transition-all duration-200 ease-linear 
             `}
           >
             <HiMenuAlt4 />
@@ -50,14 +48,14 @@ const Navbar = ({ children }) => {
               className="fixed top-0 bottom-0 right-0 z-10 px-4 py-2 w-4/5  
               flex justify-start items-end flex-col 
               h-screen 
-              bg-white bg-opacity-70 shadow-lg backdrop-blur-sm lg:hidden md:hidden
-             
-              
+              bg-white bg-opacity-70 shadow-lg backdrop-blur-sm 
               "
             >
               <button
                 onClick={() => setToggle(false)}
-                className="text-blue-700 z-30 font-bold text-2xl hover:text-gray-300 transition duration-200 ease-linear align-middle"
+                className="text-blue-700 z-30 font-bold text-2xl hover:text-gray-300 transition duration-200 ease-linear align-middle
+                
+                "
               >
                 <HiX />
               </button>
