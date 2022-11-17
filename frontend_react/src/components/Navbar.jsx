@@ -22,7 +22,9 @@ const Navbar = ({ children }) => {
                   href={`#${item}`}
                   className="text-decoration-none text-slate-700 uppercase flex-col font-semibold 
                   hover:text-blue-700 hover:underline underline-offset-4 transition-all duration-200 ease-linear"
-                ></a>
+                >
+                  {item}
+                </a>
               </li>
             )
           )}
