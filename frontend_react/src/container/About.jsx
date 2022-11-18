@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { images } from "../constants";
 import { urlFor, client } from "../client";
+import { AppWrap } from "../wrapper";
 
 // const abouts = [
 //   {
@@ -41,10 +42,7 @@ const About = () => {
   }, []); // run once onMount
 
   return (
-    <div
-      id="about"
-      className="px-8 text-center flex-1 w-full flex-col"
-    >
+    <div className="px-8 text-center flex-1 w-full flex-col align-middle items-center">
       <h2 className="text-4xl">
         I Know That <span className=" text-purple-800">Good Development </span>
         Means <span className=" text-purple-800">Good Business</span>
@@ -83,4 +81,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, "about");

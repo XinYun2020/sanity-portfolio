@@ -6,16 +6,27 @@ const Navbar = ({ children }) => {
   const [toggle, setToggle] = useState(false);
   return (
     <>
-      <nav className="bg-slate-300 bg-opacity-25 w-full flex justify-between items-center py-2 px-4 border-b xborder-orange-400 border-opacity-20 fixed z-20 backdrop-blur-sm">
-        <div className="flex justify-start items-center font-bold text-slate-700">
+      <nav
+        className="
+      w-full flex justify-between items-center py-2 px-2 bg-slate-300 backdrop-blur-sm border-b border-slate-200 fixed z-20 bg-opacity-10
+      "
+      >
+        <div
+          className="font-bold text-slate-700
+        flex justify-start items-start 
+        "
+        >
           {"<x.z>"}
         </div>
-        <ul className="flex-1 flex justify-center items-center list-style-none max-lg:hidden">
+        <ul
+          className="flex-1 flex items-center list-style-none max-lg:hidden justify-evenly mx-56
+        "
+        >
           {["home", "about", "contact", "work", "skills", "contact"].map(
             (item) => (
               <li
                 key={`link-${item}`}
-                className="px-4 cursor-pointer flex-col "
+                className="my-0 mx-1 cursor-pointer flex-col"
               >
                 {/* <div className="w-1 h-1 bg-transparent rounded-full hover:bg-blue-700"></div> */}
                 <a

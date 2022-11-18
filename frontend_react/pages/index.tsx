@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       </Head>
 
       <main className="">
-        <div className="py-8"></div>
+        {/* <div className="py-8"></div> */}
         <Header />
         <About />
         <Work />
