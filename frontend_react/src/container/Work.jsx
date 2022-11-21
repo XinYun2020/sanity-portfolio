@@ -22,17 +22,17 @@ const Work = () => {
 
   const handleWorkFilter = (item) => {
     setActiveFilter(item);
-    setAnimateCard([{ y: 100, opacity: 0 }]);
+    setAnimateCard([{ y: 100, opacity: 0 }]); // retrigger the shuffle animation of the card once change the tab catergory (slide from bottom to top)
 
     setTimeout(() => {
-      setAnimateCard([{ y: 0, opacity: 1 }]);
+      setAnimateCard([{ y: 0, opacity: 1 }]); // retrigger animation
 
       if (item === "All") {
         setFilterWork(works);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        setFilterWork(works.filter((work) => work.tags.includes(item))); // keep if the work have the selected tags
       }
-    }, 500);
+    }, 500); // 500 ms
   };
 
   return (
@@ -66,17 +66,19 @@ const Work = () => {
       <motion.div
         animate={animateCard}
         transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-portfolio"
+        className="app__work-portfolio flex flex-wrap justify-center items-center"
       >
         {filterWork.map((work, index) => (
           <div
-            className="app__work-item app__flex"
+            className="app__work-item app__flex flex flex-col w-72 m-4 p-2 rounded-lg bg-white text-slate-700
+            cursor-pointer transition-all duration-300 ease-in-out hover:shadow-xl"
             key={index}
           >
-            <div className="app__work-img app__flex">
+            <div className="app__work-img app__flex flex w-full h-56 relative">
               <img
                 src={urlFor(work.imgUrl)}
                 alt={work.name}
+                className="w-full h-full rounded-lg object-cover"
               />
               {/* POP OUT FROM LEFT TO RIGHT WHEN HOVER */}
               <motion.div
@@ -86,7 +88,8 @@ const Work = () => {
                   ease: "easeInOut",
                   staggerChildren: 0.5,
                 }} // staggerChildren: element going to show one after another
-                className="app__work-hover app__flex"
+                className="app__work-hover app__flex flex absolute z-20 top-0 left-0 bottom-0 right-0 w-full h-full bg-black bg-opacity-50 rounded-xl 
+                opacity-0 translate duration-300 ease-in-out justify-center items-center"
               >
                 {/* EYE */}
                 <a
@@ -100,9 +103,9 @@ const Work = () => {
                     transition={{
                       duration: 0.25,
                     }}
-                    className="app__flex"
+                    className="app__flex flex w-12 h-12 rounded-full bg-black bg-opacity-50 text-white translate duration-300 ease-in-out m-4"
                   >
-                    <AiFillEye />
+                    <AiFillEye className="m-auto text-2xl" />
                   </motion.div>
                 </a>
                 {/* GITHUB */}
@@ -117,19 +120,19 @@ const Work = () => {
                     transition={{
                       duration: 0.25,
                     }}
-                    className="app__flex"
+                    className="app__flex flex w-12 h-12 rounded-full bg-black bg-opacity-50 text-white translate duration-300 ease-in-out m-4"
                   >
-                    <AiFillGithub />
+                    <AiFillGithub className="m-auto text-2xl" />
                   </motion.div>
                 </a>
               </motion.div>
             </div>
             {/* TITLE AND DESCRIPTION OF THE PROJECT */}
-            <div className="app__work-content app__flex">
-              <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text mt-3 ">{work.description}</p>
-              <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0]}</p>
+            <div className="app__work-content app__flex mt-2 p-1 w-full relative flex-col text-center leading-6">
+              <h4 className="bold-text font-bold">{work.title}</h4>
+              <p className="p-text mt-3 font-light">{work.description}</p>
+              <div className="app__work-tag app__flex absolute z-30 py-1 px-2 rounded-xl bg-white -top-10 justify-center flex left-1/3 right-1/3">
+                <p className="p-text font-light">{work.tags[0]}</p>
               </div>
             </div>
           </div>
