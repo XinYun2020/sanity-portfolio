@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <div className="">
       <Head>
-        <title>Portfolio</title>
+        <title>Xinyun Zhang</title>
         <link
           rel="icon"
           href="/favicon.ico"
