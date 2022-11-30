@@ -16,7 +16,7 @@ const scaleVariants = {
 };
 const Header = () => {
   return (
-    <div className="app__header app__flex flex flex-1 w-screen h-screen flex-row pb-0 px-2 max-xl:flex-col max-sm:pb-1 max-sm:px-2 ">
+    <div className="app__header app__flex flex flex-1 w-screen h-screen flex-row pb-0 px-2 max-lg:flex-col max-sm:pb-1 max-sm:px-2 ">
       {/* <div className="w-48 h-48 rounded-full bg-gradient-to-br from-white to-gray-300 cover-full"></div> */}
       <motion.div
         whileInView={{ x: [-100, 0], opacity: [0, 1] }}
