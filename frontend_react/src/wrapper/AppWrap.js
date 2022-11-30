@@ -15,7 +15,7 @@ const AppWrap = (Component, idName, classNames) =>
           <div
             className="
         app-wrapper flex-1 w-full flex-col py-4 px-2 max-w-md:pt-4 max-w-md:px-1 max-w-md:pb-2
-        app-flex flex justify-center items-center pt-24
+        app-flex flex justify-center items-center pt-24 
         
         "
           >
