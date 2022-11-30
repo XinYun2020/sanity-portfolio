@@ -39,9 +39,9 @@ const Testimonial = () => {
             <img
               src={urlFor(test.imgurl)}
               alt="testimonial"
-              className="w-2/3 object-cover mr-5 rounded-3xl hover:rounded-md  transition-all duration-200 ease-linear"
+              className="w-1/3 object-cover mr-5 rounded-3xl hover:rounded-md  transition-all duration-200 ease-linear"
             />
-            <div className="app__testimonial-content my-auto">
+            <div className="app__testimonial-content my-auto w-2/3 px-2">
               <p className="p-text">{test.feedback}</p>
               <div className="mt-5">
                 <h4 className="bold-text font-semibold text-xl text-end">
@@ -51,7 +51,7 @@ const Testimonial = () => {
               </div>
             </div>
           </div>
-          <div className="app__testimonial-btns app__flex justify-center text-center py-4 text-3xl text-slate-500 gap-8">
+          <div className="app__testimonial-btns app__flex flex flex-row justify-center text-center py-4 text-3xl text-slate-500 gap-8 mt-3 ">
             <button
               className="app__flex"
               onClick={() =>
@@ -62,7 +62,10 @@ const Testimonial = () => {
                 )
               }
             >
-              <HiChevronLeft className="hover:text-purple-700 " />
+              <HiChevronLeft
+                className="bg-white rounded-full 
+               ring-4 shadow-lg ring-white hover:text-purple-700 "
+              />
             </button>
             <button
               className="app__flex"
@@ -74,13 +77,16 @@ const Testimonial = () => {
                 )
               }
             >
-              <HiChevronRight className="hover:text-purple-700 " />
+              <HiChevronRight
+                className="bg-white rounded-full 
+               ring-4 shadow-lg ring-white hover:text-purple-700 "
+              />
             </button>
           </div>
         </>
       )}
       <div
-        className="app__testimonials-brands w-4/5 flex-wrap mt-2 mx-auto w-2/3
+        className="app__testimonials-brands flex-wrap mt-2 mx-auto w-2/3
        app__flex flex"
       >
         {brands.map((brand) => (
